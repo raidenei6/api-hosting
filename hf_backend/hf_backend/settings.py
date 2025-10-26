@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', "api-hf-backend.onrender.com", "127.0.0.1", "api-hosting.com", "api-hosting-production-49a5.up.railway.app", "*"]
 
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 
 # Application definition
 
